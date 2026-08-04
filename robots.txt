@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://digitalelandschaftspflege-stack.github.io/sitemap.xml

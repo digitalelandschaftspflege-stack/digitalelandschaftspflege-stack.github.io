@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://digitalelandschaftspflege-stack.github.io/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://digitalelandschaftspflege-stack.github.io/impressum.html</loc>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://digitalelandschaftspflege-stack.github.io/datenschutz.html</loc>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://digitalelandschaftspflege-stack.github.io/agb.html</loc>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://digitalelandschaftspflege-stack.github.io/widerruf.html</loc>
+    <priority>0.3</priority>
+  </url>
+</urlset>
