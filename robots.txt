@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://digitalelandschaftspflege-stack.github.io/sitemap.xml
+Sitemap: https://fotocheck.sandra-lippert.com/sitemap.xml
