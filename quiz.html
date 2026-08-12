@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wie dringend ist die Pflanze auf deiner Fläche? · Kurz-Check</title>
+<meta name="description" content="5 kurze Fragen, keine Anmeldung, kein Foto nötig: eine erste Einschätzung, wie dringend sich ein genauer Blick auf die Pflanze in deinem Garten lohnt.">
+<link rel="canonical" href="https://fotocheck.sandra-lippert.com/quiz.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<meta property="og:site_name" content="Sandra Lippert · Landschaftspfleger mit Biss">
+<meta property="og:title" content="Wie dringend ist die Pflanze auf deiner Fläche?">
+<meta property="og:description" content="5 kurze Fragen, kein Foto nötig: eine erste Einschätzung in einer Minute.">
+<meta property="og:url" content="https://fotocheck.sandra-lippert.com/quiz.html">
+<meta property="og:image" content="https://fotocheck.sandra-lippert.com/og-bild.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Wie dringend ist die Pflanze auf deiner Fläche?">
+<meta name="twitter:image" content="https://fotocheck.sandra-lippert.com/og-bild.jpg">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --g:#4a8a3f;--gd:#357030;--gp:#f5fbf4;--gl:#e8f5e5;
+  --gold:#c8972a;--txt:#1a2e1a;--mid:#3d5a3d;--mut:#6b8f6b;
+  --brd:#d4e8d0;--w:#ffffff;
+  --font:Segoe UI,-apple-system,BlinkMacSystemFont,Helvetica Neue,Arial,sans-serif;
+}
+body{font-family:var(--font);color:var(--txt);line-height:1.72;background:var(--gp);-webkit-font-smoothing:antialiased;}
+h1,h2,h3{line-height:1.28;letter-spacing:-.01em;}
+a{text-decoration:none;}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.95rem 1.7rem;border-radius:12px;font-weight:700;font-size:.97rem;cursor:pointer;border:none;transition:transform .15s,box-shadow .15s,background .15s;}
+.btn:active{transform:scale(.98);}
+.btn-g{background:var(--g);color:#fff!important;box-shadow:0 4px 20px rgba(74,138,63,.35);}
+.btn-g:hover{background:var(--gd);}
+.btn-o{background:transparent;color:var(--g)!important;border:2px solid var(--g);}
+.btn-o:hover{background:var(--gl);}
+.btn[disabled]{opacity:.4;cursor:not-allowed;box-shadow:none;}
+
+header{padding:1.3rem 1.5rem;background:var(--w);border-bottom:1px solid var(--brd);}
+.head-in{max-width:640px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;}
+.brand{font-weight:800;font-size:.95rem;color:var(--txt);}
+.brand span{color:var(--g);}
+.head-in a.back{font-size:.85rem;color:var(--mut);font-weight:600;}
+.head-in a.back:hover{color:var(--g);}
+
+main{max-width:640px;margin:0 auto;padding:2.2rem 1.3rem 4rem;}
+
+.progress{display:flex;gap:.4rem;margin-bottom:1.8rem;}
+.progress i{flex:1;height:5px;border-radius:3px;background:var(--brd);}
+.progress i.on{background:var(--g);}
+
+.card{background:var(--w);border:1px solid var(--brd);border-radius:20px;padding:2rem 1.6rem;box-shadow:0 4px 24px rgba(74,138,63,.08);}
+
+/* INTRO */
+.intro .pill{display:inline-flex;align-items:center;gap:.5rem;background:var(--gl);border-radius:50px;padding:.35rem 1rem;font-size:.72rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--gd);margin-bottom:1.1rem;}
+.intro h1{font-size:clamp(1.5rem,5vw,2rem);margin-bottom:.9rem;}
+.intro p{color:var(--mid);font-size:1rem;margin-bottom:1rem;}
+.intro ul{list-style:none;margin:1.3rem 0 1.6rem;display:flex;flex-direction:column;gap:.55rem;}
+.intro li{font-size:.9rem;color:var(--mid);display:flex;align-items:center;gap:.55rem;}
+.intro li::before{content:"✓";color:var(--g);font-weight:900;}
+
+/* QUESTION */
+.q-label{font-size:.72rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--mut);margin-bottom:.6rem;}
+.q-text{font-size:1.25rem;font-weight:800;margin-bottom:1.4rem;}
+.opts{display:flex;flex-direction:column;gap:.7rem;}
+.opt{display:block;width:100%;text-align:left;background:var(--gp);border:2px solid var(--brd);border-radius:14px;padding:.95rem 1.1rem;font-size:.95rem;font-weight:600;color:var(--txt);cursor:pointer;transition:border-color .15s,background .15s;}
+.opt:hover{border-color:var(--g);background:var(--gl);}
+.opt.sel{border-color:var(--g);background:var(--gl);color:var(--gd);}
+.nav-row{display:flex;justify-content:space-between;align-items:center;margin-top:1.6rem;}
+.nav-row .skip{font-size:.82rem;color:var(--mut);font-weight:600;}
+.nav-row .skip:hover{color:var(--g);}
+
+/* RESULT */
+.result-tag{display:inline-flex;align-items:center;gap:.5rem;border-radius:50px;padding:.35rem 1rem;font-size:.72rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;margin-bottom:1.1rem;}
+.result-tag.hi{background:#fde8e8;color:#b83030;}
+.result-tag.mid{background:#fdf0e0;color:#b8670a;}
+.result-tag.lo{background:var(--gl);color:var(--gd);}
+.result h2{font-size:clamp(1.35rem,5vw,1.7rem);margin-bottom:.9rem;}
+.result p{color:var(--mid);font-size:.98rem;margin-bottom:1rem;}
+.result-cta{margin-top:1.5rem;padding-top:1.4rem;border-top:1px solid var(--brd);}
+.result-cta .price{font-size:.85rem;color:var(--mut);margin-top:.6rem;text-align:center;}
+.restart{display:block;text-align:center;margin-top:1.2rem;font-size:.85rem;color:var(--mut);font-weight:600;cursor:pointer;}
+.restart:hover{color:var(--g);}
+
+.hinweis{max-width:640px;margin:1.8rem auto 0;padding:0 1.3rem;}
+.hinweis p{font-size:.76rem;color:#77907a;line-height:1.6;}
+
+footer{margin-top:2.5rem;padding:1.5rem;text-align:center;}
+footer p{font-size:.8rem;color:var(--mut);}
+footer a{color:var(--mut);}
+footer a:hover{color:var(--g);}
+
+@media(max-width:480px){
+  .card{padding:1.6rem 1.2rem;border-radius:16px;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="head-in">
+    <div class="brand">Sandra Lippert <span>· Kurz-Check</span></div>
+    <a class="back" href="index.html">Zu den Produkten →</a>
+  </div>
+</header>
+
+<main>
+  <div class="progress" id="progress"></div>
+
+  <!-- INTRO -->
+  <section class="card intro" id="screen-intro">
+    <div class="pill">Kostenloser Kurz-Check</div>
+    <h1>Was wächst da bei dir?</h1>
+    <p>5 kurze Fragen. Kein Foto nötig, keine Anmeldung. Du bekommst sofort eine erste Einschätzung, wie dringend sich ein genauer Blick auf die Pflanze lohnt.</p>
+    <ul>
+      <li>Dauert etwa eine Minute</li>
+      <li>Ergebnis sofort auf dieser Seite</li>
+      <li>Ersetzt keinen Foto-Check, gibt dir aber eine erste Richtung</li>
+    </ul>
+    <a class="btn btn-g" style="width:100%;" onclick="startQuiz()">Jetzt starten →</a>
+  </section>
+
+  <!-- QUESTIONS (built by JS) -->
+  <section class="card" id="screen-question" style="display:none;">
+    <div class="q-label" id="q-label"></div>
+    <div class="q-text" id="q-text"></div>
+    <div class="opts" id="q-opts"></div>
+    <div class="nav-row">
+      <span class="skip" onclick="prevQ()" id="back-link">← Zurück</span>
+      <span class="skip" onclick="window.location.href='index.html#produkte'">Direkt zum Produkt →</span>
+    </div>
+  </section>
+
+  <!-- RESULT -->
+  <section class="card result" id="screen-result" style="display:none;">
+    <div id="result-body"></div>
+    <span class="restart" onclick="startQuiz()">Nochmal von vorn</span>
+  </section>
+
+  <div class="hinweis">
+    <p>Dieser Kurz-Check ist eine erste, unverbindliche Orientierung anhand deiner eigenen Angaben. Er identifiziert keine Pflanze und ersetzt keine fachliche Einschätzung. Ob es sich tatsächlich um eine invasive Pflanze handelt und was konkret zu tun ist, sagt dir nur ein Blick aufs Foto, zum Beispiel beim Pflanzen-SofortCheck. Auch das ist keine Rechtsberatung.</p>
+  </div>
+</main>
+
+<footer>
+  <p>Sandra Lippert · Landschaftspfleger mit Biss · <a href="mailto:kontakt@sandra-lippert.com">kontakt@sandra-lippert.com</a></p>
+  <p style="margin-top:.5rem;"><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
+</footer>
+
+<script>
+var QUESTIONS = [
+  {
+    label: "Frage 1 von 5",
+    text: "Wie hoch ist die Pflanze ungefähr?",
+    opts: [
+      {t:"Kniehoch oder kleiner", v:0},
+      {t:"Hüfthoch bis schulterhoch", v:1},
+      {t:"Größer als du, teils über zwei Meter", v:2}
+    ]
+  },
+  {
+    label: "Frage 2 von 5",
+    text: "Wo steht sie?",
+    opts: [
+      {t:"Im eigenen Garten oder auf dem Grundstück", v:0},
+      {t:"Am Wegrand oder auf einer öffentlichen Fläche", v:1},
+      {t:"Direkt am Bach, Teich oder Graben", v:2}
+    ]
+  },
+  {
+    label: "Frage 3 von 5",
+    text: "Wie hat sie sich seit letztem Jahr entwickelt?",
+    opts: [
+      {t:"Sieht seit Jahren etwa gleich aus", v:0},
+      {t:"Neu entdeckt, weiß nicht seit wann sie da ist", v:1},
+      {t:"Deutlich mehr oder größer als letztes Jahr", v:2}
+    ]
+  },
+  {
+    label: "Frage 4 von 5",
+    text: "Hast du schon etwas gegen sie unternommen?",
+    opts: [
+      {t:"Noch nichts", v:0},
+      {t:"Ausgerissen oder ausgegraben", v:1},
+      {t:"Gemäht oder abgeschnitten", v:2}
+    ]
+  },
+  {
+    label: "Frage 5 von 5",
+    text: "Spielen dort Kinder oder Haustiere, oder ist die Fläche für andere frei zugänglich?",
+    opts: [
+      {t:"Nein, eher nicht", v:0},
+      {t:"Gelegentlich", v:1},
+      {t:"Ja, regelmäßig", v:2}
+    ]
+  }
+];
+
+var current = 0;
+var answers = [];
+
+function renderProgress(){
+  var wrap = document.getElementById('progress');
+  wrap.innerHTML = '';
+  for (var i = 0; i < QUESTIONS.length; i++){
+    var el = document.createElement('i');
+    if (i <= current) el.className = 'on';
+    wrap.appendChild(el);
+  }
+}
+
+function startQuiz(){
+  current = 0;
+  answers = [];
+  document.getElementById('screen-intro').style.display = 'none';
+  document.getElementById('screen-result').style.display = 'none';
+  document.getElementById('screen-question').style.display = 'block';
+  renderProgress();
+  renderQuestion();
+}
+
+function renderQuestion(){
+  var q = QUESTIONS[current];
+  document.getElementById('q-label').textContent = q.label;
+  document.getElementById('q-text').textContent = q.text;
+  var optsWrap = document.getElementById('q-opts');
+  optsWrap.innerHTML = '';
+  q.opts.forEach(function(opt, idx){
+    var b = document.createElement('button');
+    b.className = 'opt' + (answers[current] === opt.v ? ' sel' : '');
+    b.textContent = opt.t;
+    b.onclick = function(){ selectAnswer(opt.v); };
+    optsWrap.appendChild(b);
+  });
+  document.getElementById('back-link').style.visibility = current === 0 ? 'hidden' : 'visible';
+  renderProgress();
+}
+
+function selectAnswer(v){
+  answers[current] = v;
+  if (current < QUESTIONS.length - 1){
+    current++;
+    renderQuestion();
+  } else {
+    showResult();
+  }
+}
+
+function prevQ(){
+  if (current > 0){
+    current--;
+    renderQuestion();
+  }
+}
+
+function showResult(){
+  document.getElementById('screen-question').style.display = 'none';
+  document.getElementById('screen-result').style.display = 'block';
+  renderProgress();
+
+  var score = answers.reduce(function(a,b){ return a + (b || 0); }, 0);
+  var body = document.getElementById('result-body');
+  var tierClass, tag, headline, text;
+
+  if (score >= 7){
+    tierClass = 'hi'; tag = 'Eher dringend';
+    headline = 'Das würde ich mir zeitnah ansehen.';
+    text = 'Größe, Standort und wie schnell sich das entwickelt: genau das sind die Anzeichen, bei denen sich viele erst kümmern, wenn es sich schon ausgebreitet hat. Ob es sich um eine invasive Pflanze handelt und was jetzt sinnvoll ist, zeigt dir ein Foto sicherer als jede Vermutung.';
+  } else if (score >= 3){
+    tierClass = 'mid'; tag = 'Im Blick behalten';
+    headline = 'Lohnt sich, das im Blick zu behalten.';
+    text = 'Nicht jede Pflanze, die wächst, ist gleich ein Notfall. Aber sicher weißt du es erst, wenn jemand mit Praxiserfahrung draufschaut. Ein Foto reicht dafür.';
+  } else {
+    tierClass = 'lo'; tag = 'Eher unauffällig';
+    headline = 'Klingt nach deinen Angaben erstmal nicht dramatisch.';
+    text = 'Ganz ausschließen kann das trotzdem nur ein Blick aufs Foto. Manche invasive Pflanzen sehen am Anfang harmlos aus. Wenn du dir unsicher bist, schick mir ein Bild, für 49 € hast du schriftlich Klarheit.';
+  }
+
+  body.innerHTML =
+    '<span class="result-tag ' + tierClass + '">' + tag + '</span>' +
+    '<h2>' + headline + '</h2>' +
+    '<p>' + text + '</p>' +
+    '<div class="result-cta">' +
+      '<a class="btn btn-g" style="width:100%;" href="index.html#produkte">Jetzt Pflanzen-SofortCheck buchen →</a>' +
+      '<p class="price">Foto senden, schriftliche Einschätzung in 24 Stunden, 49 € inkl. MwSt.</p>' +
+    '</div>';
+}
+</script>
+
+</body>
+</html>
